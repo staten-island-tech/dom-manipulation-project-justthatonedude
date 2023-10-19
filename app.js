@@ -6,6 +6,8 @@ const DOMSelectors = {
     firstNameoutput: document.querySelector("#firstNameoutput"),
     lastNameoutput: document.querySelector("#lastNameoutput"),
     passwordoutput: document.querySelector("#passwordoutput"),
+    output: document.querySelector("#output")
+    
     //select the textbox
     //select all the h2s in one property
 };
@@ -27,3 +29,6 @@ DOMSelectors.form.addEventListener("submit", function(event){
     DOMSelectors.lastNameoutput.innerText = lastName
     DOMSelectors.passwordoutput.innerText = password
 });
+function clearcontent(DOMSelectors) { 
+    DOMSelectors.output.innerHTML = ""; 
+} 
