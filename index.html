@@ -7,23 +7,19 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Profile Gen</h1>
     <div class="form">
         <form action="" id="form">
             <label for="firstName">First Name</label>
             <input type="text" name="firstName" id="first-name"/>
             <label for="lastName">Last Name</label>
             <input type="text" name="lastName" id="last-name"/>
-            <label for="Password">Password</label>
-            <input type="password" name="Password" id="pass-word"/>
+            <label for="image">image</label>
+            <input type="url" name="image" id="image"/>
             <input type="submit" value="Click Here" />
         </form>
     </div>
-   <div id = "output">
-        <p id="firstNameoutput"></p>
-        <p id="lastNameoutput"></p>
-        <p id="passwordoutput"></p>
-    </div>
-    <button onclick="clearcontent(DOMSelectors)"></button>
+    <button id="btn">Clear Profile</button>
     <script src="app.js"></script>
 </body>
 </html>

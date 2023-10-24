@@ -2,12 +2,12 @@ const DOMSelectors = {
     form: document.querySelector("#form"),
     firstName: document.querySelector("#first-name"),
     lastName: document.querySelector("#last-name"),
-    password: document.querySelector("#pass-word"),
-    firstNameoutput: document.querySelector("#firstNameoutput"),
+    image: document.querySelector("#image"),
+ /*    firstNameoutput: document.querySelector("#firstNameoutput"),
     lastNameoutput: document.querySelector("#lastNameoutput"),
-    passwordoutput: document.querySelector("#passwordoutput"),
-    output: document.querySelector("#output")
-    
+    imageoutput: document.querySelector("#imageoutput"), */
+    box: document.querySelector("#box"),
+    button: document.querySelector("button"),
     //select the textbox
     //select all the h2s in one property
 };
@@ -21,14 +21,28 @@ const DOMSelectors = {
 
 DOMSelectors.form.addEventListener("submit", function(event){
     event.preventDefault();
-    const formValue = DOMSelectors.form.value
+    const form = DOMSelectors.form
     const firstName = DOMSelectors.firstName.value
     const lastName = DOMSelectors.lastName.value
-    const password = DOMSelectors.password.value
-    DOMSelectors.firstNameoutput.innerText = firstName
-    DOMSelectors.lastNameoutput.innerText = lastName
-    DOMSelectors.passwordoutput.innerText = password
+    const image = DOMSelectors.image.value
+    const tempDiv = document.createElement("div");
+    if (form) {
+        form.insertAdjacentElement("afterend", tempDiv);
+    }
+    tempDiv.insertAdjacentHTML(
+        "afterbegin",
+        "<p id=firstNameoutput></p><p id=lastNameoutput></p><img id=imageoutput></img>"
+      );
+    document.getElementById("firstNameoutput").innerText = firstName
+    document.getElementById("lastNameoutput").innerText = lastName
+    document.getElementById("imageoutput").src = image
 });
-function clearcontent(DOMSelectors) { 
-    DOMSelectors.output.innerHTML = ""; 
-} 
+DOMSelectors.button.addEventListener('click', function(event){
+    DOMSelectors.firstName.value = "";
+    DOMSelectors.lastName.value = "";
+    DOMSelectors.image.value = "";
+});
+
+{/* <p id="firstNameoutput"></p>
+<p id="lastNameoutput"></p>
+<img id="imageoutput" url = ""></img> */}
