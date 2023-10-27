@@ -13,24 +13,20 @@ body {
     align-items: center;
     text-align: center;
 }
-#box{
+.box{
     height: 100%;
     width: 50%;
-    display: flex;
+    margin: auto;
     align-items: center;
     text-align: center;
-    justify-content: space-between;
-    flex-direction: column;
     border: 3px solid #ffffff;
-    margin: 5% 0;
     border-radius: 20px;
-    transition: all 0.3s;
     z-index: 1;
     background-color: #ffffff;
 }
 button{
     border-radius: 20px;
-    background-color: #ffffff; 
+    background-color: #008000; 
     border: none;
     color: #000000;
     padding: 15px 32px;
